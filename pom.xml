@@ -108,7 +108,29 @@
 			<artifactId>converter-gson</artifactId>
 			<version>2.9.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.tomakehurst</groupId>
+			<artifactId>wiremock</artifactId>
+			<version>2.27.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.21.0</version>
+		</dependency>
+
 	</dependencies>
+
+
 
 	<build>
 		<plugins>
@@ -157,7 +179,13 @@
 							</configOptions>
 						</configuration>
 					</execution>
+
 				</executions>
+				<configuration>
+					<inputSpec>${project.basedir}/src/main/resources/movie.yaml</inputSpec>
+					<language>spring</language>
+				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
