@@ -10,7 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/issues")
+@RequestMapping(path = "dummy/issues")
 public class MovieDataController {
 
     private final MovieDataService movieDataService;

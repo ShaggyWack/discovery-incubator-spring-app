@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppModelMapper {
-    public static List<Movie> fromIssueListDTOToMovieModelList(List<IssueDto> issueDtos) throws NullPointerException{
+    public List<Movie> fromIssueListDTOToMovieModelList(List<IssueDto> issueDtos) throws NullPointerException{
         List<Movie> movies = new ArrayList<>();
 
         for (IssueDto issueDto: issueDtos) {
@@ -18,7 +18,7 @@ public class AppModelMapper {
         return movies;
     }
 
-    public static Movie fromIssueDTOToMovieModel(IssueDto issueDto) throws NullPointerException{
+    public Movie fromIssueDTOToMovieModel(IssueDto issueDto) throws NullPointerException{
         Movie movie = new Movie();
         MovieImages movieImages = new MovieImages();
 

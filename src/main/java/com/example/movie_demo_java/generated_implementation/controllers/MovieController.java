@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -37,19 +38,18 @@ public class MovieController implements GeneratedApi {
                 );
             }
 
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | IOException e) {
             throw new ResponseStatusException(
                     HttpStatus.INTERNAL_SERVER_ERROR,
                     "There was an error getting the movie",
                     e);
         }
     }
-
     @Override
     public ResponseEntity<List<Movie>> getMovies() {
         try {
             return new ResponseEntity<>(movieService.getMovieDataModels(), HttpStatus.OK);
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | IOException e) {
             throw new ResponseStatusException(
                     HttpStatus.INTERNAL_SERVER_ERROR,
                     "There was an error getting ALL the movies",

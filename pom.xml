@@ -108,6 +108,31 @@
 			<artifactId>converter-gson</artifactId>
 			<version>2.9.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.oltu.oauth2</groupId>
+			<artifactId>org.apache.oltu.oauth2.client</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>converter-scalars</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.gsonfire</groupId>
+			<artifactId>gson-fire</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -146,18 +171,24 @@
 						<configuration>
 							<inputSpec>${project.basedir}/src/main/resources/comicstock.json</inputSpec>
 							<language>java</language>
-							<library>resttemplate</library>
 							<apiPackage>com.gen.movie_demo_java.comicstock</apiPackage>
 							<modelPackage>com.gen.movie_demo_java.comicstock.models</modelPackage>
 							<invokerPackage>com.gen.movie_demo_java.comicstock.handler</invokerPackage>
 							<configOptions>
+								<library>retrofit2</library>
 								<sourceFolder>src/main/java</sourceFolder>
 								<dateLibrary>legacy</dateLibrary>
-								<hideGenerationTimestamps>true</hideGenerationTimestamps>
+								<interfaceOnly>true</interfaceOnly>O
 							</configOptions>
 						</configuration>
 					</execution>
 				</executions>
+
+				<configuration>
+					<inputSpec>${project.basedir}/src/main/resources/movies.yaml</inputSpec>
+					<language>spring</language>
+				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
