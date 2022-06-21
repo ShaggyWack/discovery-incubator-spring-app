@@ -1,7 +1,7 @@
-package com.example.movie_demo_java.services;
+package com.example.movie_demo_java.dummy_implementation.services;
 
-import com.example.movie_demo_java.models.MovieDataModel;
-import com.example.movie_demo_java.repositories.MovieDataRepository;
+import com.example.movie_demo_java.dummy_implementation.models.MovieDataModel;
+import com.example.movie_demo_java.dummy_implementation.repositories.MovieDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

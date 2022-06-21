@@ -1,6 +1,6 @@
-package com.example.movie_demo_java.repositories;
+package com.example.movie_demo_java.dummy_implementation.repositories;
 
-import com.example.movie_demo_java.models.MovieDataModel;
+import com.example.movie_demo_java.dummy_implementation.models.MovieDataModel;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

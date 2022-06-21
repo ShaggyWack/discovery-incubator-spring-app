@@ -1,15 +1,15 @@
-package com.example.movie_demo_java.generated_implementation.models;
+package com.example.movie_demo_java.dummy_implementation.models;
 
 import java.util.ArrayList;
 
-public class MovieModel {
+public class MovieDataModel {
 
     private int id;
     private String title;
     private String description;
     private ArrayList<MovieImageModel> images;
 
-    public MovieModel(int id, String title, String description, ArrayList<MovieImageModel> images) {
+    public MovieDataModel(int id, String title, String description, ArrayList<MovieImageModel> images) {
         this.id = id;
         this.title = title;
         this.description = description;

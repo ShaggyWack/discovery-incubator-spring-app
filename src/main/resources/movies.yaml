@@ -41,8 +41,6 @@ paths:
         description: "ID of movie that needs to be fetched"
         required: true
         type: "integer"
-        maximum: 10.0
-        minimum: 1.0
         format: "int64"
       responses:
         "200":
