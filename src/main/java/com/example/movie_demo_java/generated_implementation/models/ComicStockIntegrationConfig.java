@@ -7,12 +7,8 @@ import org.springframework.context.annotation.Bean;
 
 public class ComicStockIntegrationConfig {
     @Bean
-    public IssuesService IssuesService() {
+    public IssuesApi issuesApi() {
         return new IssuesService();
     }
 
-    @Bean
-    public ApiClient apiClient() {
-        return new ApiClient();
-    }
 }

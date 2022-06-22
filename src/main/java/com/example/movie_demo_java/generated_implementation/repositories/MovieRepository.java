@@ -13,17 +13,17 @@ import java.util.List;
 @Repository
 public class MovieRepository {
 
-    private final IssuesService issuesService;
+    private final IssuesApi issuesApi;
 
     @Autowired
-    public MovieRepository(IssuesService issuesService) {
-        this.issuesService = issuesService;
+    public MovieRepository(IssuesApi issuesApi) {
+        this.issuesApi = issuesApi;
     }
     public Response<List<IssueDto>> gatherMovieDataFromDataSource() throws IOException {
-        return issuesService.issuesGet().execute();
+        return issuesApi.issuesGet().execute();
     }
 
     public Response<IssueDto> gatherSingleMovieDataModelById(long movieId) throws IOException {
-        return issuesService.issuesGet_0((int)movieId).execute();
+        return issuesApi.issuesGet_0((int)movieId).execute();
     }
 }

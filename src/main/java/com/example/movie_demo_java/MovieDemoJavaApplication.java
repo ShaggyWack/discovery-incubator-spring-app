@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import(ComicStockIntegrationConfig.class)
 public class MovieDemoJavaApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(MovieDemoJavaApplication.class, args);
     }
